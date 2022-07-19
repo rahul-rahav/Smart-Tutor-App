@@ -1,0 +1,297 @@
+
+
+<html>
+    <head>
+    </head>
+    <body>
+        <center><h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">CIA-MARKS</h1></center>
+        <table id="tb3">
+            <tr>
+                <td>
+     <table id=tb0>  <tr><td>
+        <b style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Name </b>
+     </td><td>
+        <input id="namebox" type="text"placeholder="Enter Name"></input> <br><br>
+     </td></tr>
+     
+     <tr>
+         <td>
+            <b style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Roll No </b>
+         </td>
+         <td>
+            <input id="rollbox" type="text" value="18EUCS"></input> <br>
+         </td>
+     </tr>
+        
+    </table>  
+</td>
+<td id="td1">
+        <!-- <center> -->
+        <table id="tb1">
+            <tbody>
+                <tr>
+                    <td>
+                        <b>AI </b>
+                    </td>
+                    <td>
+                        <input id="aibox" type="text"  ></input> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>TOC </b>
+                    </td>
+                    <td>
+                        <input id="tocbox" type="text" ></input>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>DCN </b>
+                    </td>
+                    <td>
+                        <input id="dcnbox" type="text" ></input>  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>DS </b>
+                    </td>
+                    <td>
+                        <input id="dsbox" type="text"></input>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>MP </b>
+                    </td>
+                    <td>
+                        <input id="mpbox" type="text" ></input>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>OOAD</b>
+                    </td>
+                    <td>
+                        <input id="ooadbox" type="text" ></input>  
+                    </td>
+                </tr></tbody></table>
+                </td></tr></table>
+                <table id="tb2">
+                    <tbody>
+                                        <tr>
+                    <!-- <td>  
+                        <button id='insert'>INSERT</button>
+                    </td> -->
+                    <td>
+                        <button id='select'>VIEW MARKS</button>
+                    </td>
+                    <!-- <td>
+                        <button id='update'>UPDATE</button>
+                        
+                    </td>
+                    <td>
+                        <button id='delete'>DELETE</button> 
+                    </td> -->
+                </tr>
+                </tbody>
+        </table>
+                
+          
+           
+       
+            
+             
+      
+    <!-- </center> -->
+        
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script> 
+
+        <script id="MainScript">
+            var firebaseConfig = {
+            apiKey: "AIzaSyDyPukd_9DiMbAAJuPvxKxpaS1jwckzUGk",
+            authDomain: "ciamarks-8e633.firebaseapp.com",
+            databaseURL: "https://ciamarks-8e633.firebaseio.com",
+            projectId: "ciamarks-8e633",
+            storageBucket: "ciamarks-8e633.appspot.com",
+            messagingSenderId: "392778198623",
+            appId: "1:392778198623:web:9427d3e1b0116e0176b5ea"
+        };
+        firebase.initializeApp(firebaseConfig);
+//-------------------Ready Data--------------------------------------//
+var nameV, rollV, secV, genV;
+
+function Ready(){
+    nameV = document.getElementById('namebox').value;
+    rollV = document.getElementById('rollbox').value;
+    aiV = document.getElementById('aibox').value;
+    tocV = document.getElementById('tocbox').value;
+    dcnV = document.getElementById('dcnbox').value;
+    dsV = document.getElementById('dsbox').value;
+    mpV = document.getElementById('mpbox').value;
+    ooadV = document.getElementById('ooadbox').value;
+}
+//---------------------Insert Process-------------------------------------//
+    // document.getElementById('insert').onclick = function(){
+    //     Ready();
+    //     firebase.database().ref('student/'+rollV).set({
+    //         Student: nameV,
+    //         RollNo: rollV,
+    //         AI: aiV,
+    //         TOC: tocV,
+    //         DCN: dcnV,
+    //         DS: dsV,
+    //         MP: mpV,
+    //         OOAD: ooadV,
+    //     });
+    // }
+//--------------------Selection Process-------------------------------------------------//
+    document.getElementById('select').onclick = function(){
+        Ready();
+        firebase.database().ref('student/'+rollV).on('value',function(snapshot){
+            document.getElementById('namebox').value = snapshot.val().Student;
+            document.getElementById('rollbox').value = snapshot.val().RollNo;
+            document.getElementById('aibox').value = snapshot.val().AI;
+            document.getElementById('tocbox').value = snapshot.val().TOC;
+            document.getElementById('dcnbox').value = snapshot.val().DCN;
+            document.getElementById('dsbox').value = snapshot.val().DS;
+            document.getElementById('mpbox').value = snapshot.val().MP;
+            document.getElementById('ooadbox').value = snapshot.val().OOAD;  
+        });
+    }
+//--------------------Update Process------------------------------------------------------//
+        // document.getElementById('update').onclick = function(){
+        //     Ready();
+        //     firebase.database().ref('student/'+rollV).update({
+        //         Student: nameV,
+        //         AI: aiV,
+        //         TOC: tocV,
+        //         DCN: dcnV,
+        //         DS: dsV,
+        //         MP: mpV,
+        //         OOAD: ooadV, 
+        //     })
+        // }
+//--------------------Deletion Process----------------------------------------------//
+    // document.getElementById('delete').onclick = function(){
+    //     Ready();
+    //     firebase.database().ref('student/'+rollV).remove();
+    //     }
+    //     </script>
+    </body>
+</html>
+
+<style>
+    body{
+        background-color:rgb(148, 190, 211);
+    }
+    
+#select{  
+    width: 200px;  
+    height: 60px;  
+    border: none;  
+    border-radius: 5px;  
+    padding-top: 7px;
+    background-color:rgb(13, 14, 13);
+    font-style: Arial;
+    color:white;
+    margin-left:10%;
+    }
+   
+    #namebox{  
+    background-color: aliceblue;
+    width: 300px;  
+    height: 40px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    
+} 
+#rollbox{  
+    background-color: aliceblue;
+    width: 300px;  
+    height: 40px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    } 
+    #aibox{  
+    background-color: aliceblue;
+    width: 200px;  
+    height: 40px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    } 
+    #mpbox{  
+    background-color: aliceblue;
+    width: 200px;  
+    height: 40px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    }
+    #dsbox{  
+    background-color: aliceblue;
+    width: 200px;  
+    height: 40px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    }
+    #dcnbox{  
+    background-color: aliceblue;
+    width: 200px;  
+    height: 40px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    }
+    #ajpbox{  
+    background-color: aliceblue;
+    width: 190px;  
+    height: 40px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    }
+    #ooadbox{  
+    background-color: aliceblue;
+    width: 200px;  
+    height: 40px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    }
+    #tocbox{  
+    background-color: aliceblue;
+    width: 200px;  
+    height: 40px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    }
+     #tb1{
+         margin-left: 170%; 
+        
+       
+    } 
+    #tb3{
+        margin-top: 10%;
+    }
+    /* #td1{
+margin-left: 60%;
+    } */
+   
+    #tb2{
+        margin-left: 7%;
+        margin-top: 3%;
+    }
+   h1{
+    color: black;
+   }
+</style>

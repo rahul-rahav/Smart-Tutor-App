@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="font-family:verdana;">DCN QR ATTENDANCE</h1>
+        <img src="img/DCN Attendance.png" width="350px" height="350px"><br><br>
+        <input id="dcn" name="Attendance" type="button" value="VIEW ATTENDANCE"></input><br><br><br><br>
+    </center>
+    <script type="text/javascript">
+        document.getElementById("dcn").onclick = function () {
+            console.log("hi");
+            location.href = "https://docs.google.com/forms/d/1Y6tJjI18yet5QRejenZZH-6kKbw5LroopTmjXR7rzm8/edit";
+            return false;
+    
+        }</script>
+</body>
+</html>
+
+<style>
+    #dcn{  
+    width: 300px;  
+    height: 60px;  
+    border: none;  
+    border-radius: 5px;  
+    padding-top: 7px;
+    background-color:rgb(13, 14, 13);
+    font-style: Arial;
+    color:white
+    }
+</style>

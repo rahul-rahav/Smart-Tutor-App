@@ -1,0 +1,123 @@
+
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+    font-family: 'Arial';
+    background-color: rgb(247, 110, 65);
+
+} 
+ #img {
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 50px);
+    width: 120px;
+    background: rgba(255,255,255, 0.8);
+    border-radius: 59%;
+  }
+.login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background-color: whitesmoke;
+        border-radius: 15px ;
+}
+/* 
+#log:hover{
+    background: blanchedalmond;
+    border-radius: 5px; */
+
+h2{  
+    text-align: center;  
+    color:black;  
+    padding: 20px;  
+}  
+label{  
+    color:black;  
+    font-size: 17px;  
+}  
+#Uname{  
+    background-color: aliceblue;
+    width: 310px;  
+    height: 30px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+    
+}  
+#Pass{  
+    background-color: aliceblue;
+    width: 310px;  
+    height: 30px;  
+    border-color: black;  
+    border-radius: 7px;  
+    padding-left: 8px;
+      
+}  
+#log{  
+    width: 150px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color:black;
+    background-color: #2ecc71; 
+    font-size: large;
+  
+} 
+#staff{
+    width: 150px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color:black;
+    background-color: #5bb6f3;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Rubik', sans-serif;
+} 
+#Show{
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    color:black;
+    
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+font-family: 'Rubik', sans-serif;
+}
+span{  
+    color: white;  
+    font-size: 17px; 
+    float: left; 
+}  
+a{  
+    float: right;  
+    background-color: whitesmoke;  
+}
+#check{
+    float: left;
+}
+label{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-style: bold;
+}
+
+.field-icon {
+    float: right;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .container{
+    padding-top:50px;
+    margin: auto;
+  }
+
+

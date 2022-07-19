@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center>    
+        <h2>LOGIN AS STUDENT</h2><br>    
+        <div class="login">    
+        <form id="login" method="get" action="login.php">  
+            <img src="img/avatar.jpg" alt="" id="img">  
+            <br><br>
+            <table>
+                <tr><td><label><b>E-mail</b>    
+                <td><input id="Uname" type="email"placeholder="Enter E-mail."></input></td></tr>
+          
+            <tr><td>
+             <td>
+
+                </td>
+                <tr><td>
+
+                </td></tr>
+            </td></tr>
+            <tr><td><label><b>Password</b>    
+                <td><input id="Pass" type="password" placeholder="Enter password."></input></td></tr>
+            <tr><td><label><b></b></label>
+                <td>
+            <input type="button" value="Show" id="Show" onclick="myFunction()"></td></tr>
+        </table> 
+            <br><br>   
+            <input type="button" name="log" id="log" value="LOGIN">    
+            <br><br><br>        
+            <input type="button" name="staff" id="staff" value="LOGIN AS TUTOR">
+            
+<script>
+function myFunction() {
+  var x = document.getElementById("Pass");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+              
+        </form>     
+    </div> 
+    </center>
+
+    <script src="JS/js.js">
+        </script>
+
+<script type="text/javascript">
+    document.getElementById("staff").onclick = function () {
+        location.href = "staff.html";
+
+    };</script>
+
+</body>
+</html>
+
+
+

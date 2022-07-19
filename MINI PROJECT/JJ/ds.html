@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="font-family:verdana;">DS QR ATTENDANCE</h1>
+        <img src="img/DS Attendance.png" width="350px" height="350px"><br><br>
+        <input id="ds" name="Attendance" type="button" value="VIEW ATTENDANCE"></input><br><br><br><br>
+    </center>
+    <script type="text/javascript">
+        document.getElementById("ds").onclick = function () {
+            console.log("hi");
+            location.href = "https://docs.google.com/forms/d/12kYfy7KF-yTL0wUC2bZq2rlCu7znae84i03YFd2pRX8/edit";
+            return false;
+    
+        }</script>
+</body>
+</html>
+<style>
+    #ds{  
+    width: 300px;  
+    height: 60px;  
+    border: none;  
+    border-radius: 5px;  
+    padding-top: 7px;
+    background-color:rgb(13, 14, 13);
+    font-style: Arial;
+    color:white
+    }
+</style>
